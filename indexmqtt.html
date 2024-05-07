@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://preview.colorlib.com/theme/bootstrap/website-menu-19/# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Website menu 09</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+<link href="./styles/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./styles/font-awesome.min.css">
+<link rel="stylesheet" href="./styles/style.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MQTT over WebSocket</title>
+
+  </head>
+  <body>
+    
+<div id="colorlib-page">
+<a href="index.html" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+<nav id="colorlib-main-menu" role="navigation">
+<ul>
+<li class="colorlib-active"><a href="index.html">Home</a></li>
+<li><a href="indexmqtt.html">Chess</a></li>
+<li><input type="button" onclick="starthide()" value="Settings"></li>
+<li><a href="gpstry.html">GPS</a></li>
+<li><a href="/#">Services</a></li>
+<li><a href="/#">Blog</a></li>
+<li><a href="/#">Contact</a></li>
+</ul>
+</nav>
+</aside> 
+
+<div id="colorlib-main">
+<section class="ftco-section pt-4 mb-5 ftco-intro">
+<div class="container-fluid px-3 px-md-0">
+<div class="row">
+<div class="col-md-12 mb-4">
+    <div class="container">
+        <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/chessboard-1.0.0.min.css"> 
+    <div>
+      <p>Click for coordinates.</p>
+  
+      <button class=button-7 onclick="getLocation()">Try It</button>
+      
+      <p id="demo"></p>
+      </div>
+        <h1>ꉓꃅꍟꌗꌗ ꁅꍏꎭꍟ</h1>
+
+   
+        <div class="board" id="board"></div>
+        <div class="buttons">
+            <button class="play-again">Play Again</button>
+            <button class="set-pos">Set Position</button>
+            <button class="flip-board">Flip Board</button>
+            <button  class="play-mqtt">Play Mqtt</button>
+        </div>
+        <div class="player" id="1" >25:10</div>
+        <div class="player" id="2" >25:10</div>
+        <div id="move-history" class="move-history"></div>
+    </div>
+
+
+<div id="settings">
+<h1 class="h2">Website menu Setting</h1> 
+<br><center>
+    <i>Reload resets clock</i><br>
+</center>
+
+
+<hr>
+
+<div class="over_msg" id="gameOver"></div>
+
+<div id="modal">
+  <div >
+    <form>
+      <label>Time </label>
+      <input type="range" name="time" min="1" max="90" value="25" oninput="this.form.amt_input.value=this.value">
+      <input type="number" name="amt_input" min="1" max="90" value="25" oninput="this.form.time.value=this.value"><br>
+      <label>Increment </label>
+      <input type="range" name="increment" min="0" max="30" value="10" oninput="this.form.amt_inc.value=this.value">
+      <input type="number" name="amt_inc" min="0" max="30" value="10" oninput="this.form.increment.value=this.value"><br><br>
+    </form>
+    <button onclick="getClockValues()" class="modal-btn">Start Playing!</button>
+  </div>
+</div>
+<!-- Two Range Type Inputs to decide the amount of time and increment each -->
+       
+   <div class="wrapper">
+ 
+          
+      <form id="connection-information-form">
+         <b>Hostname or IP Address and Port Number wss hivemq on 8884 port please:</b> 
+         <input id="host" type="text" name="host" placeholder="broker address" value='ws://broker.hivemq.com:8000/mqtt'>
+          
+         <input id="port" type="text" name="port" value="8000"><br>
+         <b>Username:</b>
+         <input id="username" type="text" name="Username" placeholder="Username" value=""><br>
+         <b>Password:</b>
+         <input id="password" type="password" name="password" placeholder="password" value=""><br>
+         <b>Subscription topic:</b>
+        
+         <input id="topic_s" type="text" name="topic_s" value="h@3@3"><br><br>
+         <input type="button" onclick="startConnect()"  value="Connect">
+         <input type="button"  onclick="startDisconnect()" value="Disconnect"> 
+         <input type="button" onclick="startSubscribe()"  value="Subscribe">
+         <input type="button" onclick="startUnSubscribe()"  value="Unsubscribe">
+         <br><b>Publish Topic and Message:</b>
+         <input id="topic_p" type="text" name="topic_p" placeholder="Publish topic">
+          
+         <input id="Message1" type="text" name="message"  placehilder="Message">
+         <input type="button" onclick="publishMessage()" value="Publish">
+      </form>
+      <div id="messages"></div>
+   </div>
+
+   
+          </body> 
+        <script src="scripts/snippet-javascript-console.min.js">
+        
+        </script>
+ 
+</div>
+</div>
+</section>
+</div>
+</div> 
+ <div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/chessboard-1.0.0.min.js"></script>
+    <script src="scripts/chess.min.js"></script>
+    <script src="scripts/mqtt.min.js"></script>
+    <script src="scripts/mqttconnect.js"></script>
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/popper.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="./scripts/main.js"></script>
+       
+        
+</html>
+ <script>
+starthide();
+ </script>

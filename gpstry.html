@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://preview.colorlib.com/theme/bootstrap/website-menu-19/# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Website menu Sounds</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="./styles/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./styles/font-awesome.min.css">
+<link rel="stylesheet" href="./styles/style.css">
+</head>
+</head>
+<body class="">
+<div id="colorlib-page">
+<a href="/#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+<nav id="colorlib-main-menu" role="navigation">
+<ul>
+<li class="colorlib-active"><a href="index.html">Home</a></li>
+<li><a href="indexmqtt.html">Chess</a></li>
+<li><a href="gpstry.html">GPS</a></li>
+<li><a href="/#">About</a></li>
+<li><a href="/#">Services</a></li>
+<li><a href="/#">Blog</a></li>
+<li><a href="/#">Contact</a></li>
+</ul>
+</nav>
+</aside> 
+<div id="colorlib-main">
+<section class="ftco-section pt-4 mb-5 ftco-intro">
+<div class="container-fluid px-3 px-md-0">
+<div class="row">
+<div class="col-md-12 mb-4">
+<h1 class="h2">Website GPS try</h1>
+
+<h1>HTML Geolocation</h1>
+
+
+<p>Click the button to get your coordinates.</p>
+
+<button class=button-7 onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+async function myFunction() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  };
+  while (1==2) {
+  await new Promise(r => setTimeout(r, 2000));
+  console.log(x.innerHTML)
+  alert(x.innerHTML);
+  var t=setInterval(getLocation,1000);
+  }
+}
+
+var t=setInterval(getLocation,1000);
+
+</script>
+
+<p>Click the button to get time.</p>
+<button onclick="setTimeout(myFunction, 3000)">Try it</button>
+
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <script type="module" src="/scripts/index.js"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises.
+      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+    
+    <script
+      //                         AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao        
+      //
+      // src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&callback=initMap&v=weekly"
+      //defer
+    ></script>
+  -->
+  
+  
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12457.278491177272!2d-9.33402665!3d60.6875018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ec9af10761789%3A0xeed8b026a0aec69e!2sDallas!5e0!3m2!1sen!2spt!4v1713647161933!5m2!1sen!2spt" height="450" position="absolute" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+<style>
+.google-map {
+     padding-bottom: 50%;
+     position: relative;
+}
+
+.google-map iframe {
+     height: 100%;
+     width: 100%;
+     left: 0;
+     top: 0;
+     position: absolute;
+}
+</style>
+<!--
+<style>
+  .google-maps {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+  }
+  .google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 120% !important;
+  }
+</style>
+
+
+<div class="google-maps">
+  <iframe
+    src="https://www.google.com/maps/embed"
+    width="600"
+    height="40"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+  ></iframe>
+  
+</div>
+
+-->
+
+
+</body>
+</html>
+
+
+<!--
+  <h1>Speech recognition</h1>
+  <p><em>Hint: try saying a color name</em></p>
+  <h1>
+    <div>
+    <button class=button-7 onclick="startRecording()">Start recording</button>
+    <button class=button-7 id="stop">Stop recording</button>
+     </div>
+  </h1>
+  <div class="words-container"></div>
+  <script src="scripts/app.js"></script>
+  </div>
+ -->
+ 
+  
+<script src="./scripts/jquery.min.js"></script>
+<script src="./scripts/popper.js"></script>
+<script src="./scripts/bootstrap.min.js"></script>
+<script src="./scripts/main.js"></script>
+</body>
+
+
+
+
